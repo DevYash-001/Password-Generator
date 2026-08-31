@@ -1,0 +1,25 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# PyInstaller build files
+build/
+dist/
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Python environment files
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
