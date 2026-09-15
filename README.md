@@ -1,398 +1,159 @@
-# 🔐 Password Generator
+# Password Generator
 
-<p align="center">
-  <strong>A secure, modern, and lightweight password generator for Windows</strong>
-</p>
-
-<p align="center">
-  Built with <strong>Python</strong> + <strong>CustomTkinter</strong> with security-focused password generation using Python's <code>secrets</code> module.
-</p>
-
-<p align="center">
+> A secure and modern Windows password generator built with Python and CustomTkinter.
 
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![CustomTkinter](https://img.shields.io/badge/CustomTkinter-GUI-1F6FEB?style=for-the-badge)](https://github.com/TomSchimansky/CustomTkinter)
-[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CustomTkinter](https://img.shields.io/badge/CustomTkinter-UI-2B2D42?style=for-the-badge)](https://github.com/TomSchimansky/CustomTkinter)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/DevYash-001/Password-Generator?style=for-the-badge)](https://github.com/DevYash-001/Password-Generator/releases/latest)
 
-</p>
+Password Generator is a desktop app for creating strong random passwords with configurable length and character options. It is designed for Windows, uses Python's `secrets` module for secure randomness, and can be packaged as a standalone `.exe` with PyInstaller.
 
----
+![Password Generator Screenshot](assets/password-generator.png)
 
-## ✨ Overview
+> If the screenshot does not appear, make sure `assets/password-generator.png` exists in the repository.
 
-**Password Generator** is a desktop application designed to generate strong and customizable passwords through a clean, modern Windows interface.
+## Download
 
-The application allows users to control password length and character types while providing a password-strength indicator and convenient clipboard functionality.
+### Windows executable
 
-Security is a core focus of the project. Password generation uses Python's built-in `secrets` module, which is designed for generating cryptographically strong random values.
+Download the latest Windows build from the GitHub Releases page:
 
----
+[Download latest release](https://github.com/DevYash-001/Password-Generator/releases/latest)
 
-## 🎯 Why This Project?
+If the release includes an `.exe` file, download it from the **Assets** section and run it directly on Windows.
 
-Weak and reused passwords remain a common security problem.
+### Source code
 
-This project was built to provide a simple desktop tool that makes generating strong passwords quick, convenient, and accessible without requiring an online password generator.
-
-### Key goals
-
-- 🔐 Generate stronger passwords
-- ⚡ Make password generation fast and simple
-- 🖥️ Provide a modern desktop interface
-- 🛡️ Use security-focused randomness
-- 📋 Make generated passwords easy to copy
-- 📦 Provide a standalone Windows executable
-
----
-
-## 🚀 Features
-
-| Feature | Description |
-|---|---|
-| 🔐 Secure Generation | Uses Python's `secrets` module for security-focused randomness |
-| 📏 Custom Length | Generate passwords from **12–64 characters** |
-| 🔤 Lowercase | Include lowercase letters |
-| 🔠 Uppercase | Include uppercase letters |
-| 🔢 Numbers | Include numeric characters |
-| 🔣 Symbols | Include special characters |
-| 🛡️ Character Guarantees | Selected character categories are represented in the generated password |
-| 📊 Strength Indicator | Displays an indication of password strength |
-| 👁️ Show / Hide | Toggle password visibility |
-| 📋 Copy to Clipboard | Copy generated passwords quickly |
-| 🌙 Modern UI | Clean dark-themed CustomTkinter interface |
-| 🪟 Windows Executable | Can be packaged as a standalone `.exe` |
-
----
-
-## 🖼️ Application Preview
-
-> Add screenshots of the application here.
-
-<p align="center">
-  <img src="assets/Screenshot 2026-09-15 125616.png" alt="Password Generator application screenshot" width="750">
-</p>
-
-### 💡 Recommended screenshots
-
-Add 2–3 screenshots showing:
-
-1. Main password generator interface
-2. Generated strong password
-3. Password strength indicator / settings
-
----
-
-## 🛠️ Tech Stack
-
-### Programming Language
-
-- 🐍 Python
-
-### GUI
-
-- 🎨 CustomTkinter
-
-### Security
-
-- 🔐 Python `secrets`
-
-### Packaging
-
-- 📦 PyInstaller
-
-### Development Tools
-
-- Git
-- GitHub
-- Virtual Environment
-
----
-
-## 📂 Project Structure
-
-```text
-Password-Generator/
-│
-├── assets/
-│   └── icon.ico
-│
-├── src/
-│   └── main.py
-│
-├── .gitignore
-├── LICENSE
-├── PasswordGenerator.spec
-├── README.md
-└── requirements.txt
-```
-
----
-
-## ⚙️ Installation
-
-### 1. Clone the repository
+You can also run the app from source:
 
 ```bash
 git clone https://github.com/DevYash-001/Password-Generator.git
-```
-
-### 2. Navigate into the project
-
-```bash
 cd Password-Generator
-```
-
-### 3. Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-### 4. Activate the virtual environment
-
-#### Windows
-
-```bash
-.venv\Scripts\activate
-```
-
-### 5. Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### 6. Run the application
-
-```bash
 python src/main.py
 ```
 
----
+## Features
 
-## 📦 Build the Windows Executable
+- Cryptographically secure password generation
+- Adjustable password length from 12 to 64 characters
+- Lowercase letter support
+- Uppercase letter support
+- Number support
+- Symbol support
+- Guarantees selected character categories when generating passwords
+- Password strength indicator
+- Show and hide generated password
+- Copy password to clipboard
+- Modern dark interface
+- Windows executable support through PyInstaller
 
-The project includes a PyInstaller specification file.
+## Security
 
-Install PyInstaller if required:
+This project uses Python's `secrets` module instead of the standard `random` module. The `secrets` module is designed for generating cryptographically strong random values suitable for passwords, tokens, and similar security-sensitive data.
 
-```bash
-pip install pyinstaller
+Generated passwords are not intentionally stored or transmitted by the application. As with any password tool, use the app on a trusted device and avoid sharing generated passwords through insecure channels.
+
+## Usage
+
+1. Open the application.
+2. Choose the password length.
+3. Select the character types you want to include.
+4. Generate a password.
+5. Review the strength indicator.
+6. Copy the password when ready.
+
+## Tech Stack
+
+- Python
+- CustomTkinter
+- `secrets`
+- PyInstaller
+
+## Project Structure
+
+```text
+Password-Generator/
++-- assets/
+|   +-- icon.ico
+|   +-- password-generator.png
++-- src/
+|   +-- main.py
++-- .gitignore
++-- LICENSE
++-- PasswordGenerator.spec
++-- README.md
++-- requirements.txt
 ```
 
-Then build the application using:
+## Installation From Source
+
+### Requirements
+
+- Python 3.x
+- `pip`
+
+### Steps
+
+```bash
+git clone https://github.com/DevYash-001/Password-Generator.git
+cd Password-Generator
+pip install -r requirements.txt
+python src/main.py
+```
+
+## Build the Windows Executable
+
+The repository includes a PyInstaller spec file, so the simplest build command is:
 
 ```bash
 pyinstaller PasswordGenerator.spec
 ```
 
-The generated executable will be available inside the `dist/` directory.
+After the build completes, check the `dist/` folder for the generated executable.
 
----
-
-## 🔐 Security
-
-Security is one of the main design considerations of this project.
-
-### `secrets` instead of `random`
-
-The application uses Python's:
-
-```python
-import secrets
-```
-
-instead of the standard:
-
-```python
-import random
-```
-
-The `secrets` module is intended for security-sensitive random value generation.
-
-### Password handling
-
-The application does not intentionally store or transmit generated passwords.
-
-> **Important:** No password generator should be treated as a complete security solution by itself. Users should also use unique passwords and, where possible, a trusted password manager and multi-factor authentication.
-
----
-
-## 🧠 How It Works
-
-The basic workflow is:
-
-```text
-User
-  │
-  ▼
-Select Password Options
-  │
-  ├── Length
-  ├── Lowercase
-  ├── Uppercase
-  ├── Numbers
-  └── Symbols
-  │
-  ▼
-Secure Password Generation
-  │
-  ▼
-Password Strength Evaluation
-  │
-  ▼
-Display Generated Password
-  │
-  ├── Show / Hide
-  └── Copy to Clipboard
-```
-
----
-
-## 🎨 Interface
-
-The application is built with **CustomTkinter**, providing a modern alternative to the traditional Tkinter appearance.
-
-The interface focuses on:
-
-- Clean layout
-- Simple controls
-- Dark theme
-- Easy password generation
-- Clear strength feedback
-- Minimal user interaction
-
----
-
-## 🧪 Example
-
-A generated password may look similar to:
-
-```text
-G7!qP2#vL9@xK4
-```
-
-> Never use example passwords from documentation for real accounts.
-
----
-
-## 📋 Requirements
-
-- Windows 10 / Windows 11
-- Python 3.x
-- CustomTkinter
-- PyInstaller *(only required for building the executable)*
-
----
-
-## 🗺️ Roadmap
-
-Planned improvements:
-
-- [ ] Add password history
-- [ ] Add configurable character sets
-- [ ] Add passphrase generation
-- [ ] Add entropy calculation
-- [ ] Improve password-strength analysis
-- [ ] Add application settings
-- [ ] Add keyboard shortcuts
-- [ ] Improve accessibility
-- [ ] Add automated tests
-- [ ] Add GitHub Actions CI
-- [ ] Publish official Windows releases
-- [ ] Add release versioning and changelog
-
----
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-### Getting started
-
-1. Fork the repository
-2. Clone your fork
-3. Create a feature branch
+If you need to build manually instead of using the spec file, a typical command may look like this:
 
 ```bash
-git checkout -b feature/your-feature
+pyinstaller --onefile --windowed --icon=assets/icon.ico src/main.py
 ```
 
-4. Make your changes
-5. Test the application
-6. Commit your changes
+The exact output name may depend on the PyInstaller configuration.
 
-```bash
-git add .
-git commit -m "feat: add your feature"
-```
+## Roadmap
 
-7. Push your branch
+Planned or possible improvements:
 
-```bash
-git push origin feature/your-feature
-```
+- Attach the packaged `.exe` to the latest GitHub Release
+- Add or update the screenshot at `assets/password-generator.png`
+- Add automated checks or basic tests for password generation logic
+- Add more release notes for future versions
+- Improve documentation with troubleshooting notes
 
-8. Open a Pull Request
+## Contributing
 
----
+Contributions are welcome.
 
-## 🐛 Reporting Issues
+To contribute:
 
-If you find a bug or have a feature request, please open an issue.
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Test the app locally.
+5. Open a pull request with a clear description.
 
-When reporting a bug, include:
+Useful links:
 
-- Windows version
-- Python version
-- Steps to reproduce
-- Expected behavior
-- Actual behavior
-- Screenshots or error messages when relevant
+- [Repository](https://github.com/DevYash-001/Password-Generator)
+- [Issues](https://github.com/DevYash-001/Password-Generator/issues)
+- [Pull Requests](https://github.com/DevYash-001/Password-Generator/pulls)
+- [Releases](https://github.com/DevYash-001/Password-Generator/releases)
 
----
+## Reporting Security Issues
 
-## 📜 License
+If you find a security issue, avoid posting sensitive details publicly. Open an issue with general information, or contact the repository owner through GitHub if a private contact method is available.
 
-This project is licensed under the **MIT License**.
+## License
 
-See the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 Author
-
-### DevYash
-
-Built as a Python desktop application with a focus on security, usability, and clean software development practices.
-
-<p align="left">
-
-[![GitHub](https://img.shields.io/badge/GitHub-DevYash--001-181717?style=for-the-badge&logo=github)](https://github.com/DevYash-001)
-
-</p>
-
----
-
-## ⭐ Support
-
-If you find this project useful:
-
-⭐ **Star the repository**
-
-🍴 **Fork the repository**
-
-🐛 **Report bugs**
-
-💡 **Suggest improvements**
-
-🤝 **Contribute**
-
-Your support helps the project grow!
-
----
-
-<p align="center">
-  <strong>🔐 Generate Strong. Stay Secure.</strong>
-</p>
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
