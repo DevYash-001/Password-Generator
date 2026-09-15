@@ -70,7 +70,7 @@ This project was built to provide a simple desktop tool that makes generating st
 > Add screenshots of the application here.
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="Password Generator application screenshot" width="750">
+  <img src="assets/Screenshot 2026-09-15 125616.png" alt="Password Generator application screenshot" width="750">
 </p>
 
 ### 💡 Recommended screenshots
